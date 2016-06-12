@@ -55,7 +55,7 @@ dhash_t *dhash_init(int block_len)
 		return NULL;
 	memset(dhash, 0, sizeof(dhash_t));
 	if (block_len == 0)
-		block_len = DEFAULT_BUCKET_LEN;
+		block_len = DEFAULT_BLOCK_LEN;
 	dhash->table = malloc(size * sizeof(item_t *));
 	if (!dhash->table)
 		return NULL;

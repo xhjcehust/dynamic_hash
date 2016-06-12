@@ -1,7 +1,7 @@
 #ifndef __DHASH_H__
 #define __DHASH_H__
 
-#define DEFAULT_BUCKET_LEN 4
+#define DEFAULT_BLOCK_LEN 4
 #define INIT_HASH_TABLE_PREFIX 0
 
 typedef void * elem_t;
