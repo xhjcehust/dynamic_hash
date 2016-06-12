@@ -5,4 +5,4 @@ $ make
 
 Then you will get two test files: int_hash_test and str_hash_test.
 
-For more informations, see http://blog.csdn.net/xhjcehust/article/details/45844901.
+For more informations, see http://blog.csdn.net/xhjcehust/article/details/51645418 
