@@ -7,15 +7,15 @@
 typedef void * elem_t;
 typedef struct block_s block_t;
 
-struct block_s{
-	elem_t* data;
-	block_t *next; //overflow block
+struct block_s {
+    elem_t* data;
+    block_t *next; //overflow block
 };
 
 typedef struct {
-	int ref_count;
-	int hash_prefix;
-	block_t block;
+    int ref_count;
+    int hash_prefix;
+    block_t block;
 } item_t;
 
 typedef int (*hash_func_t)(elem_t elem);
@@ -28,14 +28,14 @@ typedef elem_t (*copy_elem_func_t)(elem_t elem);
 typedef void (*show_elem_func_t)(elem_t elem);
 
 typedef struct {
-	item_t **table;
-	int block_len;
-	int hash_prefix; //start from 1 and hash table size is 1 << (hash_prefix - 1)
-	hash_func_t hash_func;
-	free_elem_func_t free_elem_func;
-	elem_equal_func_t elem_equal_func;
-	copy_elem_func_t copy_elem_func;
-	show_elem_func_t show_elem_func;
+    item_t **table;
+    int block_len;
+    int hash_prefix; //start from 1 and hash table size is 1 << (hash_prefix - 1)
+    hash_func_t hash_func;
+    free_elem_func_t free_elem_func;
+    elem_equal_func_t elem_equal_func;
+    copy_elem_func_t copy_elem_func;
+    show_elem_func_t show_elem_func;
 } dhash_t;
 
 dhash_t *dhash_init(int block_len);
